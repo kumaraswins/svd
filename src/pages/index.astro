@@ -1,0 +1,225 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    image={{
+      src: '~/assets/images/finance.svg',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      Elevate your business with us <br />
+      <span class="text-accent dark:text-white highlight"> Our actions, attitudes, and values have helped to build business</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+        We stand at the frontier of a new and challenging landscape of ease of doing business in India, with the aim to best address our clients’ needs, providing value for money with expertise and proven service methodologies.
+
+        From Auditing & Assurance to Mergers & Acquisitions, Taxation to Transfer Pricing, Business Consulting to Restructuring, we are adept at handling any and every stream of business, thus helping enterprises concentrate on their core business areas. Dedicated and divergent skills set apart the team of enterprising and evolved workforce comprising Senior Chartered Accountants, Company Secretaries, Business Analysts, and Management Strategists.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Statistics about us"
+    stats={[
+      { title: 'Offices', amount: '4' },
+      { title: 'Employees', amount: '248' },
+      { title: 'Templates', amount: '12' },
+      { title: 'Awards', amount: '24' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Our Services"
+    subtitle="We provide."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Assurance',
+        description:
+          'Financial assurance is a critical aspect of business operations, ensuring accuracy, transparency, and compliance. We excel in providing robust financial assurance services, encompassing auditing, risk assessment, and regulatory compliance.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Taxation',
+        description:
+          'Navigating complex tax landscapes, we offer comprehensive taxation services, optimizing strategies for businesses to ensure compliance and maximize financial efficiency.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'NRI Taxation',
+        description:
+          'Specializing in NRI taxation, we provide expert guidance on income, investments, and compliance, ensuring seamless financial management for non-resident individuals and businesses.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Compliance',
+        description:
+          'Our Compliance services ensure adherence to legislations in the complex Indian regulatory framework, making it a hassle-free exercise for you. Providing you with a knowledge partnership, we make optimal use of our PAN India presence by efficiently handling end-to-end compliances, enabling you to focus on your business growth.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Pricing Avisory',
+        description:
+          'Pricing and protection issues are prime considerations in ensuring rational valuation. Our professional teams, with their vast knowledge and substantial global experience offer fund raising, due diligence, M&A advisory, valuations, and financial modelling which facilitate scientific decision making.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Business Avisory',
+        description:
+          'As entry strategy specialists, we understand that setting up business in aseemingly complex Indian jurisdiction can be daunting. With over two decades of experience in giving process-driven and structured advice, our turnkey project management service supports every stage of your business setup.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Branding',
+        description:
+          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Medical',
+        description:
+          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fashion Design',
+        description:
+          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
+        icon: 'tabler:template',
+      },
+    ]}
+    
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our values"
+    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    items={[
+      {
+        title: 'Customer-centric approach',
+        description:
+          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+      },
+      {
+        title: 'Constant Improvement',
+        description:
+          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+      },
+      {
+        title: 'Ethical Practices',
+        description:
+          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Achievements"
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    isReversed={true}
+    callToAction={{
+      text: 'See more',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Global reach',
+        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Positive customer feedback and reviews',
+        description:
+          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Awards and recognition as industry experts',
+        description:
+          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our locations"
+    tagline="Find us"
+    columns={4}
+    items={[
+      {
+        title: 'EE.UU',
+        description: '1234 Lorem Ipsum St, 12345, Miami',
+      },
+      {
+        title: 'Spain',
+        description: '5678 Lorem Ipsum St, 56789, Madrid',
+      },
+      {
+        title: 'Australia',
+        description: '9012 Lorem Ipsum St, 90123, Sydney',
+      },
+      {
+        title: 'Brazil',
+        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Technical Support"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with us',
+        description:
+          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call us',
+        description:
+          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

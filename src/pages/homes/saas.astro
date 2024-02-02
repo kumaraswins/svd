@@ -1,0 +1,383 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Saas Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Phosphating"
+    
+    callToAction2={{ text: 'Learn more', href: '#features' }}
+    image={{
+      src: 'https://kluthe.com/media/image/13/b0/e0/KTL_600x600@2x.jpg',
+      //src: 'https://engmag.in/wp-content/uploads/2019/06/The-Process-3.jpg',
+      alt: 'Phosphating',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">Low temperature: Phosphating
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Achieving a competitive edge in industrial processes involves adopting cutting-edge practices, particularly in metal surface treatment. The implementation of low-temperature zinc and manganese phosphating techniques offers significant advantages. These environmentally friendly methods not only contribute to energy conservation but also minimise sludge production, aligning with sustainable practices. Specifically designed for structural bridges and rail wagons, low-temperature manganese phosphating enhances the durability and corrosion resistance of these critical infrastructure components.
+
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Why Low temperature?"
+    subtitle="Each of the following features enhances  value proposition."
+    columns={2}
+    items={[
+      {
+        title: 'Lower (e.g., 30-60°C)',
+        description:
+          'Resulting in lower energy consumption.Sludge Formation: Reduced sludge formation, contributing to a lower environmental impact.',
+        icon: 'tabler:layers-union',
+      },
+      
+      {
+        title: 'Industry Applications',
+        description:
+          'Widely applicable across diverse industries, chosen for environmental benefits and compatibility with sensitive materials.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Environmental Impact',
+        description: `Lower environmental impact with reduced energy consumption and sludge formation`,
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Sludge',
+        description: `Reduced sludge formation, contributing to a lower environmental impact.`,
+        icon: 'tabler:rocket',
+      },
+      
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  
+  <Content
+    title="Statistics"
+    subtitle="It offers several advantages in industrial processes compared to traditional phosphating methods conducted at higher temperatures."
+    isReversed
+    items={[
+      {
+        title: 'Market Growth:',
+        description:
+          'Growing demand for environmentally friendly and energy-efficient metal surface treatments, including low-temperature phosphating.',
+      },
+      {
+        title: 'Adoption Rate',
+        description: `Increasing adoption across industries, particularly in automotive, aerospace, and construction.`,
+      },
+      {
+        title: 'Environmental Impact',
+        description: `Companies are increasingly prioritizing low-temperature options for reduced energy consumption and minimized waste generation.`,
+      },
+      {
+        title: 'Industry Segments',
+        description: `Applications in structural bridges, rail wagons, and various metal components where corrosion resistance is critical.`,
+      },
+      {
+        title: 'Energy Savings',
+        description: `Low-temperature phosphating processes contribute to energy savings compared to high-temperature alternatives.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
+      alt: 'Startup Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Some key benefits include 
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Corrosion Resistance:',
+        description: `Passivation enhances the corrosion resistance of metal surfaces, forming a protective oxide layer that helps prevent rust and corrosion.`,
+      },
+      {
+        title: 'Improved Surface Finish:',
+        description: `The passivation process contributes to an improved surface finish, removing contaminants and oxides to create a smoother and more aesthetically appealing surface.`,
+      },
+      {
+        title: 'Extended Service Life:',
+        description: `By providing a protective barrier against corrosion, passivation helps extend the service life of metal components, reducing the need for frequent replacements`,
+      },
+      {
+        title: 'Chemical Inertness:',
+        description: `Passivated surfaces exhibit increased chemical inertness, making them less reactive to environmental factors and enhancing their stability in various applications.`,
+      },
+    ]}
+    image={{
+      src: 'https://www.reliance-foundry.com/wp-content/uploads/passivated-stainless-steel.jpg',
+      alt: 'SaaS Businesses Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Passivation 
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Enhanced Wear Resistance:',
+        description: `Manganese phosphate coatings contribute to increased wear resistance on metal surfaces, making them more durable and suitable for applications with high friction and mechanical stress.`,
+      },
+      {
+        title: 'Corrosion Protection:',
+        description: `The coating provides effective corrosion protection, forming a phosphate layer that acts as a barrier against environmental elements and helps prevent rust and corrosion.`,
+      },
+      {
+        title: 'Surface Lubrication:',
+        description: ` Manganese phosphate coatings can serve as an effective base for lubricants, promoting improved surface lubrication and reducing friction in applications such as sliding and rotating components.`,
+      },
+      
+    ]}
+    image={{
+      src: 'https://crestchemicals.com/assets/images/manganese-phosphate.jpg',
+      alt: 'Portfolio Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Manganese Phosphate: 
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        title: 'Corrosion Resistance::',
+        description: `Provide a protective layer on metal surfaces, enhancing corrosion resistance by acting as a barrier against environmental factors, preventing rust and degradation.`,
+      },
+      {
+        title: 'Paint Adhesion:',
+        description: `Iron phosphate coatings serve as an excellent base for paint adhesion, promoting better bonding between the substrate and the paint layer, resulting in improved coating durability and longevity.`,
+      },
+      {
+        title: 'Environmentally Friendly:',
+        description: `Iron phosphate coatings are often considered environmentally friendly, as the process typically involves fewer hazardous materials compared to some alternative coating methods, aligning with sustainability and regulatory considerations.`,
+      },
+      
+    ]}
+    image={{
+      src: 'https://alertsales.com/wp-content/uploads/2020/07/Zirconium-Phosphate-Free-Conversion-Coatings-300x300.jpg',
+      alt: 'Iron Phospahting',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Iron Phospahte: 
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Enhanced Lubrication:',
+        description: `Zinc phosphate coatings can contribute to improved lubrication properties, making them suitable for applications involving moving parts by reducing friction and wear on the coated surfaces.`,
+      },
+      {
+        title: 'Paint Adhesion:',
+        description: `Zinc phosphate coatings provide an ideal surface for paint adhesion, enhancing the bond between the substrate and paint layers. This results in improved coating durability and resistance to chipping and peeling.`,
+      },
+      {
+        title: 'Corrosion Protection:',
+        description: `Zinc phosphate coatings offer excellent corrosion protection by forming a durable and adherent layer on metal surfaces, acting as a barrier against moisture and environmental elements.`,
+      },
+      
+    ]}
+    image={{
+      src: 'https://www.ckpinc.com/Page/19/CssImgServlet?id=1208',
+      alt: 'Portfolio Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Zinc Phosphate: 
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'Scale and Oxide Removal:',
+        description: `Acid pickling is highly effective in removing scales, oxides, and other impurities from metal surfaces, ensuring a clean substrate for subsequent processing or coating applications.`,
+      },
+      {
+        title: 'Surface Preparation:',
+        description: `Acid pickling provides excellent surface preparation by etching the metal surface, promoting better adhesion of coatings such as paint or plating, resulting in enhanced coating durability.`,
+      },
+      {
+        title: 'Material Restoration:',
+        description: `Acid pickling can be used for the restoration of metal components, removing corrosion, rust, and other contaminants, thereby extending the service life of the treated materials.`,
+      },
+      
+    ]}
+    image={{
+      src: 'https://www.worldironsteel.com/Content/upload/201749951/201709221600345512220.jpg',
+      alt: 'Acid Pickling',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Acid Pickling: 
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
+
+  <!-- Pricing Widget ******************* -->
+<Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Oil and Grease Removal:',
+        description: `Degreasing effectively eliminates oils, greases, and other contaminants from surfaces, ensuring a clean substrate for subsequent processes like coating, bonding, or machining.`,
+      },
+      {
+        title: 'Improved Adhesion:',
+        description: `By removing oily residues, degreasing enhances the adhesion of coatings, adhesives, and other materials to the treated surface, promoting stronger and more reliable bonds.`,
+      },
+      {
+        title: 'Prevents Surface Defects:',
+        description: `Degreasing plays a crucial role in preventing surface defects such as fisheyes or uneven coatings, ensuring a smooth and uniform finish in various industrial applications.`,
+      },
+      
+    ]}
+    image={{
+      src: 'https://www.chemours.com/en/-/media/images/corporate/vertrel/pd/clouseup-of-metal-gear-sitting-on-container-or-tub-1-4-1.jpg',
+      alt: 'Portfolio Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Degreasing: 
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  
+  <!-- FAQs Widget ******************* -->
+
+  
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Reach out to us"
+    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+    callToAction={{
+      text: 'Contact us',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Email us',
+        description: 'contact@support.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call us',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Follow us',
+        description: '@example',
+        icon: 'tabler:brand-twitter',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  
+</Layout>
